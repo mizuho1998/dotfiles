@@ -5,7 +5,7 @@ sudo apt install zsh
 chsh -s $(which zsh)
 
 # install zplug
-$ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 # install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
