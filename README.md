@@ -8,7 +8,12 @@ then
 
 1. `$ make github_check`
 
-then
+then,
+
+- install [anyenv](https://github.com/anyenv/anyenv)
+- install [nodenv](https://github.com/nodenv/nodenv) using anyenv
+
+exec:
 
 1. `$ make install`
 1. `$ make deploy`
