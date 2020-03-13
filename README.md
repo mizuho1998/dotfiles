@@ -17,3 +17,6 @@ exec:
 
 1. `$ make install`
 1. `$ make deploy`
+
+setting:
+write your github information in `.gitconfig.local`
