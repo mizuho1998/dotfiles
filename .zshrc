@@ -64,6 +64,8 @@ alias lla='ls -al'
 alias platex='docker run --rm -v $PWD:/work -w=/work mizuhof/texubuntu platex'
 alias dvipdfmx='docker run --rm -v $PWD:/work -w=/work mizuhof/texubuntu dvipdfmx'
 
+alias allping='echo 192.168.0.{1..254} | xargs -P256 -n1 ping -s1 -c1 -W1 | grep ttl'
+
 
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
