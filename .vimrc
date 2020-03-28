@@ -36,12 +36,10 @@ endif
 " coc.nvim
 "
 let g:coc_global_extensions = ['coc-json', 'coc-python']
-
 nmap ge :CocCommand explorer<CR>
 
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
-
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
@@ -86,29 +84,30 @@ let g:ale_fixers = {
 " Rainbow Parentheses
 "
 let g:rbpt_colorpairs = [
-    \ ['brown',       'RoyalBlue3'],
-    \ ['Darkblue',    'SeaGreen3'],
-    \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkgreen',   'firebrick3'],
-    \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['brown',       'firebrick3'],
-    \ ['gray',        'RoyalBlue3'],
-    \ ['black',       'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['Darkblue',    'firebrick3'],
     \ ['darkgreen',   'RoyalBlue3'],
-    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkcyan',    'RoyalBlue3'],
     \ ['darkred',     'DarkOrchid3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['brown',       'RoyalBlue3'],
     \ ['red',         'firebrick3'],
+    \ ['brown',       'firebrick3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkgreen',   'firebrick3'],
     \ ]
+    " \ ['darkmagenta', 'DarkOrchid3'],
+    " \ ['darkmagenta', 'DarkOrchid3'],
+    " \ ['darkgray',    'DarkOrchid3'],
+    " \ ['gray',        'RoyalBlue3'],
+    " \ ['black',       'SeaGreen3'],
 let g:rbpt_max = 16
-let g:rbpt_loadcmd_toggle = 0
+" let g:rbpt_loadcmd_toggle = 0
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+au Syntax * RainbowParenthesesLoadChevrons " <>
 
 
 "
@@ -116,14 +115,14 @@ au Syntax * RainbowParenthesesLoadBraces
 "
 colorscheme iceberg
 
+
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_altv = 1
 let g:netrw_winsize = 75
 
-nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 
-"End dein Scripts-------------------------
+
 " 文字コードをUFT-8に設定
 set encoding=utf-8
 scriptencoding utf-8
@@ -197,3 +196,4 @@ set wrapscan
 set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
