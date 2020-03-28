@@ -135,6 +135,10 @@ set noswapfile
 set autoread
 " クリップボードを共有
 set clipboard=unnamed,autoselect
+" クリップボードのペースト時に勝手にコメントやインデントされるのを防ぐ
+" set paste
+set pastetoggle=<F3>
+
 
 " 行番号を表示
 set number
@@ -142,6 +146,8 @@ set number
 set cursorline
 " 現在の行を強調表示（縦）
 "set cursorcolumn
+" カーソルが何行目の何列目に置かれているかを表示
+set ruler
 " 行末の1文字先までカーソルを移動できるように
 set virtualedit=onemore
 " ビープ音を可視化
@@ -155,11 +161,13 @@ set wildmode=list:longest
 " 折り返し時に表示行単位での移動できるようにする
 nnoremap j gj
 nnoremap k gk
+" シンタックスハイライトの有効化
+syntax enable
 
 
 " Tab系
 " 不可視文字を可視化
-set list listchars=tab:\▸\-
+set list listchars=tab:\▸\_,trail:~,extends:»,precedes:«
 set smartindent
 set autoindent
 " Tab文字を半角スペースにする
@@ -173,13 +181,7 @@ endif
 set tabstop=4
 " 行頭でのTab文字の表示幅
 set shiftwidth=4
-set listchars=tab:>_
 set list
-
-set incsearch " インクリメンタルサーチ. １文字入力毎に検索を行う
-set ignorecase " 検索パターンに大文字小文字を区別しない
-set smartcase " 検索パターンに大文字を含んでいたら大文字小文字を区別する
-set hlsearch " 検索結果をハイライト
 
 
 " 検索系
