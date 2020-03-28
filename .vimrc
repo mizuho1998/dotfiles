@@ -18,6 +18,7 @@ Plug 'cocopon/iceberg.vim'
 Plug 'dense-analysis/ale'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 
