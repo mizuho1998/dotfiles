@@ -1,12 +1,7 @@
-if &compatible
-  set nocompatible
-endif
-"if !isdirectory(expand('~/.vim/autoload/plug.vim'))
 if !isdirectory(expand('~/.vim/autoload/'))
     echo 'install vim-plug'
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
-
 
 call plug#begin('~/.vim/plugged')
 Plug 'simeji/winresizer'
@@ -168,20 +163,22 @@ syntax enable
 " Tab系
 " 不可視文字を可視化
 set list listchars=tab:\▸\_,trail:~,extends:»,precedes:«
-set smartindent
-set autoindent
+" 何個分のスペースで 1 つのタブとしてカウントするか
+set tabstop=4
+" 何個分のスペースを挿入するか
+set softtabstop=4
+" スペース何個分インデントさせるか
+set shiftwidth=4
 " Tab文字を半角スペースにする
-set expandtab
 " Makefile であれば tab をスペースに変換しない
+set expandtab
 let _curfile=expand("%:r")
 if _curfile == 'Makefile'
   set noexpandtab
 endif
-" 行頭以外のTab文字の表示幅（スペースいくつ分）
-set tabstop=4
-" 行頭でのTab文字の表示幅
-set shiftwidth=4
-set list
+set smartindent
+set smarttab
+set autoindent
 
 
 " 検索系
