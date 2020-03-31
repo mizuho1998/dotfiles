@@ -1,0 +1,9 @@
+.DS_Store
+.gitconfig.local
+
+/.vim/
+!.vim/coc-settings.json
+
+/.config/
+!.config/flake8
+!.config/pep8

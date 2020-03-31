@@ -1,0 +1,88 @@
+{
+    // スペースを表示する
+    "editor.renderWhitespace": "all",
+    // タブサイズをスペース4つ分に
+    "editor.tabSize": 4,
+    // タブをスペースに置き換える
+    "editor.insertSpaces": true,
+    // ウィンドウの端で改行する
+    "editor.wordWrap": "on",
+    // 再起動時に前回開いていたタブは開かないようにする
+    "window.restoreWindows": "none",
+    // 起動時ページを空白のページにする
+    "workbench.startupEditor": "newUntitledFile",
+    // 階層リンク
+    "breadcrumbs.enabled": true,
+    // 補完が表示されている時にEnterで先頭の候補が入力されるのを防ぐ
+    "editor.acceptSuggestionOnEnter": "off",
+
+    "[html]": {
+        "editor.tabSize": 4
+    },
+    "[javascript]": {
+        "editor.tabSize": 4
+    },
+
+    // latex settings
+    "latex-workshop.latex.tools": [
+        {
+            "command": "platex",
+            "args": [
+                "%DOCFILE%.tex"
+            ],
+            "name": "Step 1: platex"
+        },
+        {
+            "command": "dvipdfmx",
+            "args": [
+                "%DOCFILE%.dvi"
+            ],
+            "name": "Step 2: dvipdfmx"
+        },
+        {
+            "command": "rm",
+            "args": [
+                "%DOCFILE%.dvi",
+                "%DOCFILE%.aux",
+                "%DOCFILE%.log"
+            ],
+            "name": "Step 3: rm"
+        },
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "toolchain",
+            "tools": [
+                "Step 1: platex",
+                "Step 1: platex",
+                "Step 2: dvipdfmx",
+                "Step 3: rm",
+            ]
+        }
+    ],
+    // PDFのビューワーの設定
+    "latex-workshop.view.pdf.viewer": "tab",
+    // 制御文字を表示する
+    "editor.renderControlCharacters": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "latex-workshop.message.update.show": false,
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled":true,
+
+
+    "[markdown]":  {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": true
+    },
+    // Markdown PDF
+    // "markdown-pdf.margin.top": "0cm",
+    "markdown-pdf.margin.bottom": "2cm",
+    "markdown-pdf.displayHeaderFooter": true,
+    "markdown-pdf.headerTemplate": "<div></div>",
+    "C_Cpp.updateChannel": "Insiders",
+    "python.pythonPath": "/usr/local/bin/python3",
+    "go.useLanguageServer": true,
+    "liveshare.featureSet": "insiders",
+    "window.zoomLevel": 1,
+    "markdown-pdf.footerTemplate": "<div style=\"position: relative; border-top: 1px solid black; margin: 0.5cm; font-size: 9px; width: 100%;\"><div style=\"position: absolute; width: 100%; top: 0.2cm; text-align: center;\"><span class='pageNumber'></span> / <span class='totalPages'></span></div><div style=\"position: absolute; right: 0; top: 0.2cm;\">footer</div></div>"
+}

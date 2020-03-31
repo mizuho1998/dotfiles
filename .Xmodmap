@@ -1,0 +1,14 @@
+clear lock
+clear control
+
+! Caps Lock -> Control_L
+keycode 66 = Control_L Caps_Lock NoSymbol NoSymbol
+! 変換 -> Escape
+keycode 100 = Escape
+! カタカナ、ひらがな -> Escape
+keycode 101 = Escape
+! 無変換 -> Escape
+keycode 102 = Shift_L NoSymbol Shift_L
+
+add shift = Shift_L Shift_R
+add control = Caps_Lock Control_L Control_R

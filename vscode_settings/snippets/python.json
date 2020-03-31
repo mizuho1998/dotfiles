@@ -1,0 +1,48 @@
+{
+	// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"template": {
+		"prefix": "tmp",
+		"body": [
+			"# coding: UTF-8",
+			"import numpy as np",
+			"from tqdm import tqdm",
+			"import random",
+			"import os",
+			"import sys",
+			"import shutil",
+			"from argparse import ArgumentParser",
+			"",
+			"# 引数のオプションを取得する関数",
+			"def getOption():",
+			"    argparser = ArgumentParser()",
+			"    argparser.add_argument('-i', '--input', type=str,",
+			"                           default='./',",
+			"                           help='input path')",
+			"    argparser.add_argument('-o', '--output', type=str,",
+			"                           default='./output',",
+			"                           help='output path')",
+			"",
+			"    return argparser.parse_args()",
+			"",
+			"if __name__ == '__main__':",
+			"    ",
+			"    # コマンドラインから引数を取得",
+			"    args = getOption()",
+			"    INPUT_PATH  = args.input  ",
+			"    OUTPUT_PATH = args.output ",
+		],
+		"description": "python template"
+	}
+}
