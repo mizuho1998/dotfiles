@@ -210,23 +210,4 @@ set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 
-
 filetype on
-" augroup MyGroup
-"     autocmd!
-"     autocmd BufRead,BufNewFile *.sh setfiletype sh
-"     autocmd BufRead,BufNewFile *.c setfiletype c
-"     autocmd BufRead,BufNewFile *.cs setfiletype cs
-"     autocmd BufRead,BufNewFile *.cpp setfiletype cpp
-"     autocmd BufRead,BufNewFile *.css setfiletype css
-"     autocmd BufRead,BufNewFile *.go setfiletype go
-"     autocmd BufRead,BufNewFile *.html setfiletype html
-"     autocmd BufRead,BufNewFile *.java setfiletype java
-"     autocmd BufRead,BufNewFile *.js setfiletype JvaScript
-"     autocmd BufRead,BufNewFile *.json setfiletype json
-"     autocmd BufRead,BufNewFile *.py setfiletype python
-"     autocmd BufRead,BufNewFile *.sql setfiletype sql
-"     autocmd BufRead,BufNewFile *.txt setfiletype text
-"     autocmd BufRead,BufNewFile *.rb setfiletype ruby
-    " autocmd BufRead,BufNewFile *.yml setfiletype yaml
-" augroup END
