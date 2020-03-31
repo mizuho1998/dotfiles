@@ -1,6 +1,0 @@
-.DS_Store
-.gitconfig.local
-
-.vim/autoload
-.vim/plugged
-.vim/.netrwhist
