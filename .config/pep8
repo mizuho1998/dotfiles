@@ -1,3 +1,6 @@
 [pep8]
-gnore = E127, E128, E226,E302, E501
+ignore = E127, E128, E226,E302, E501
 max-line-length = 100
+
+[pycodestyle]
+ignore = E127, E128, E226,E302, E501, E731
