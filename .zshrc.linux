@@ -17,3 +17,4 @@
 alias ls='ls --color=auto'
 alias open='nautilus'
 alias rotate-monitor='xrandr --output eDP-1 --mode 1920x1080 --rotate inverted --right-of DP-2'
+alias clear-monitor='xrandr --output eDP-1 --mode 1920x1080 --rotate normal --right-of DP-2'
