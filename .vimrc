@@ -12,7 +12,6 @@ Plug 'honza/vim-snippets'
 Plug 'cocopon/iceberg.vim'
 Plug 'dense-analysis/ale'
 Plug 'kien/rainbow_parentheses.vim'
-" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
@@ -28,66 +27,33 @@ else
 endif
 
 
-"
-" coc.nvim
-"
-" let g:coc_global_extensions = ['coc-json', 'coc-python']
-" nmap ge :CocCommand explorer<CR>
 
-" inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
-" inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
-" inoremap <silent><expr> <TAB>
-"       \ pumvisible() ? coc#_select_confirm() :
-"       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-"       \ <SID>check_back_space() ? "\<TAB>" : \ coc#refresh()
+ ale
 
-" function! s:check_back_space() abort
-"   let col = col('.') - 1
-"   return !col || getline('.')[col - 1]  =~# '\s'
-" endfunction
+ let g:ale_sign_column_always = 1
+ let g:ale_fix_on_save = 1
+ let g:ale_fixers = {
+ \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+ \   'go': ['gofmt', 'goimports'],
+ \   'python': ['autopep8', 'isort'],
+ \   'json': ['fixjson', 'prettier'],
+ \   'css': ['prettier'],
+ \   'html': ['prettier'],
+ \   'javascript': ['eslint', 'prettier'],
+ \}
 
-" let g:coc_snippet_next = '<tab>'
+ let g:ale_lint_on_text_changed = 'never'
+ let g:ale_lint_on_insert_leave = 0
+ let g:ale_lint_on_enter = 0
+ let g:ale_lint_on_save = 1
+ let g:ale_linters = {
+ \    'python': ['flake8', 'autopep8'],
+ \}
 
-" " Remap keys for gotos
-" nmap <silent> gd <Plug>(coc-definition)
-" nmap <silent> gy <Plug>(coc-type-definition)
-" nmap <silent> gi <Plug>(coc-implementation)
-" nmap <silent> gr <Plug>(coc-references)
-
-" set statusline^=%{coc#status()}
-
-" function! s:show_documentation()
-"     if (index(['vim','help'], &filetype) >= 0)
-"         execute 'h '.expand('<cword>')
-"     else
-"         call CocAction('doHover')
-"     endif
-" endfunction
-
-
-"
-" ale
-"
-let g:ale_sign_column_always = 1
-let g:ale_fix_on_save = 1
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'go': ['gofmt', 'goimports'],
-\   'python': ['autopep8', 'isort'],
-\}
-
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_save = 1
-let g:ale_linters = {
-\    'python': ['flake8', 'autopep8'],
-\}
-
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:airline#extensions#ale#enabled = 1
+ let g:ale_echo_msg_error_str = 'E'
+ let g:ale_echo_msg_warning_str = 'W'
+ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+ let g:airline#extensions#ale#enabled = 1
 
 
 "
@@ -106,13 +72,7 @@ let g:rbpt_colorpairs = [
     \ ['darkcyan',    'SeaGreen3'],
     \ ['darkgreen',   'firebrick3'],
     \ ]
-    " \ ['darkmagenta', 'DarkOrchid3'],
-    " \ ['darkmagenta', 'DarkOrchid3'],
-    " \ ['darkgray',    'DarkOrchid3'],
-    " \ ['gray',        'RoyalBlue3'],
-    " \ ['black',       'SeaGreen3'],
 let g:rbpt_max = 16
-" let g:rbpt_loadcmd_toggle = 0
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
