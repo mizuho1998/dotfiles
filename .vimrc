@@ -12,6 +12,7 @@ Plug 'honza/vim-snippets'
 Plug 'cocopon/iceberg.vim'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'dense-analysis/ale'
 " LSP
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
@@ -62,6 +63,25 @@ au Syntax * RainbowParenthesesLoadChevrons " <>
 " iceberg
 "
 colorscheme iceberg
+
+
+"
+" ale
+"
+let g:ale_sign_column_always = 1
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'go': ['gofmt', 'goimports'],
+\   'python': ['autopep8', 'isort'],
+\}
+
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 0
+
+let g:airline#extensions#ale#enabled = 0
 
 
 "
