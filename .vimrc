@@ -185,3 +185,5 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 
 filetype on
+
+set backspace=indent,eol,start
