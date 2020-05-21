@@ -63,6 +63,7 @@ au Syntax * RainbowParenthesesLoadChevrons " <>
 " iceberg
 "
 colorscheme iceberg
+set background=dark
 
 
 "
