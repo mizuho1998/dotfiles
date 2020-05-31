@@ -88,9 +88,11 @@ let g:airline#extensions#ale#enabled = 0
 "
 " vim-lsp
 "
-nmap \gd :tab split<cr>:LspDefinition<cr>
-nmap \gs :sp<cr>:LspDefinition<cr>
-nmap \gv :vsp<cr>:LspDefinition<cr>
+nmap gd :LspDefinition<cr>
+nmap gt :tab split<cr>:LspDefinition<cr>
+nmap gs :sp<cr>:LspDefinition<cr>
+nmap gv :vsp<cr>:LspDefinition<cr>
+nmap gp :LspPeekDefinition<cr>
 let g:lsp_diagnostics_enabled = 1
 let g:lsp_signs_enabled = 1         " enable signs
 let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
