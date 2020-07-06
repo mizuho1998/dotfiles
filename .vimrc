@@ -88,8 +88,7 @@ let g:airline#extensions#ale#enabled = 0
 "
 " vim-lsp
 "
-nmap gd :LspDefinition<cr>
-nmap gt :tab split<cr>:LspDefinition<cr>
+nmap gd :tab split<cr>:LspDefinition<cr>
 nmap gs :sp<cr>:LspDefinition<cr>
 nmap gv :vsp<cr>:LspDefinition<cr>
 nmap gp :LspPeekDefinition<cr>
