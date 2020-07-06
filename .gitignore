@@ -4,3 +4,9 @@
 /.vim/autoload
 /.vim/plugged
 /.vim/netrwhist
+
+/.config/*
+!/.config/flake8
+!/.config/i3/
+!/.config/i3status
+!/.config/pep8
