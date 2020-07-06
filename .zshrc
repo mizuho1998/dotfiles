@@ -72,6 +72,11 @@ export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 eval "$(pyenv init -)"
 
+export PATH="$HOME/.cargo/bin:$PATH"
+source $HOME/.cargo/env
+
+export PATH="$HOME/.local/bin:$PATH"
+
 # goenv
 # GO_VERSION=`goenv version | sed -e 's/\([0-9]*.[0-9]*.[0-9]*\)\(.*\)/\1/'`
 # export PATH="$HOME/go/$GO_VERSION/bin:$PATH"
