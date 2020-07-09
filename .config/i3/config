@@ -214,3 +214,5 @@ bar {
 # launch mozc
 exec --no-startup-id fcitx
 
+# make chrome save password
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
