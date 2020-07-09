@@ -210,7 +210,3 @@ bar {
         status_command i3status
         font pango:DejaVu Sans Mono 8
 }
-
-# launch mozc
-exec --no-startup-id fcitx
-
