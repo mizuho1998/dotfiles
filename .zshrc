@@ -4,14 +4,13 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 # theme
 zplug mafredri/zsh-async, from:github
-zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
+zplug mizuho1998/common, from:github, as:theme
 autoload -U promptinit; promptinit
-zstyle ':prompt:pure:path' color cyan
+ZSH_THEME="common"
+
 
 # PROMPT変数内で変数参照する
 setopt prompt_subst
-# プロンプトが使用可能になった(前の処理が終わった)時間の表示
-RPROMPT="%F{white} %D{%m/%d %H:%M:%S} %f"
 
 # 構文のハイライト(https://github.com/zsh-users/zsh-syntax-highlighting)
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
@@ -94,3 +93,5 @@ case `uname -a` in
 esac
 
 clear
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
