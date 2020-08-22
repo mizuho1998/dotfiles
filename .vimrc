@@ -75,6 +75,10 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'go': ['gofmt', 'goimports'],
 \   'python': ['autopep8', 'isort'],
+\   'yaml': ['prettier'],
+\   'javascript': ['prettier', 'eslint'],
+\   'html': ['prettier'],
+\   'css': ['prettier'],
 \}
 
 let g:ale_lint_on_text_changed = 'never'
