@@ -73,6 +73,9 @@ export PATH="$HOME/.local/bin:$PATH"
 # goenv
 # GO_VERSION=`goenv version | sed -e 's/\([0-9]*.[0-9]*.[0-9]*\)\(.*\)/\1/'`
 # export PATH="$HOME/go/$GO_VERSION/bin:$PATH"
+if [ -n "$GOPATH" ]; then export PATH=$PATH:$GOPATH/bin; fi
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 
 case `uname -a` in
@@ -86,6 +89,5 @@ case `uname -a` in
         ;;
 esac
 
-clear
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+clear
