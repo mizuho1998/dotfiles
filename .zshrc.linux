@@ -12,7 +12,9 @@
 # fi
 
 
-[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+if [ -n "$DISPLAY" ]; then
+    [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+fi
 
 alias ls='ls --color=auto'
 alias open='nautilus'
