@@ -59,43 +59,6 @@ fi
 zplug load
 
 
-alias la='ls -a'
-alias ll='ls -l'
-alias lla='ls -al'
-
-
-case `uname -a` in
-    Darwin* )
-        [[ -f "${HOME}/.zshrc.mac" ]] && source "${HOME}/.zshrc.mac"
-        ;;
-    Linux* )
-        [[ -f "${HOME}/.zshrc.linux" ]] && source "${HOME}/.zshrc.linux"
-        ;;
-    MINGW* )
-        ;;
-esac
-
-# peco
-function peco-select-history() {
-  BUFFER=$(\history -n 1 | tac | peco)
-  CURSOR=$#BUFFER
-  zle clear-screen
-}
-zle -N peco-select-history
-bindkey '^r' peco-select-history
-
-# peco ghq
-bindkey '^]' peco-src
-function peco-src() {
-    local src=$(ghq list --full-path | peco --query "$LBUFFER")
-    if [ -n "$src" ]; then
-        BUFFER="cd $src"
-        zle accept-liine
-    fi
-    zle -R -c
-}
-zle -N peco-src
-
 # clear
 
 # if (which zprof > /dev/null 2>&1) ;then

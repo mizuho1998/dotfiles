@@ -6,4 +6,15 @@ if [ -d $ZSHHOME -a -r $ZSHHOME -a \
         [[ ${i##*/} = *.zsh  ]] &&
         [ \( -f $i -o -h $i \) -a -r $i  ] && . $i
     done
+
+    case `uname -a` in
+        Darwin* )
+            [[ -f "${ZSHHOME}/mac" ]] && source "${ZSHHOME}/mac"
+            ;;
+        Linux* )
+            [[ -f "${ZSHHOME}/linux" ]] && source "${ZSHHOME}/linux"
+            ;;
+        MINGW* )
+            ;;
+    esac
 fi
