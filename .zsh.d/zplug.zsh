@@ -46,7 +46,10 @@ setopt nolistbeep
 
 # 補完の可視化
 autoload -Uz compinit
-compinit
+for dump in ~/.zcompdump(N.mh+24); do
+    compinit
+done
+compinit -C
 zstyle ':completion:*' menu select
 
 # Install plugins if there are plugins that have not been installed
@@ -59,8 +62,8 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
+clear
 
-# clear
 
 # if (which zprof > /dev/null 2>&1) ;then
 #   zprof
