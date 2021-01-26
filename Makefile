@@ -5,6 +5,9 @@ install:
 deploy:
 	./deploy.sh
 
+unlink:
+	./unlink.sh
+
 github_ssh:
 	ssh-keygen -t rsa -f $(HOME)/.ssh/id_github_ras
 	cat git_ssh_config >> $(HOME)/.ssh/config
