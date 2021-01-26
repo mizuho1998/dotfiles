@@ -16,16 +16,12 @@ zplug mizuho1998/common, from:github, as:theme
 setopt prompt_subst
 
 # 構文のハイライト(https://github.com/zsh-users/zsh-syntax-highlighting)
-zplug "zsh-users/zsh-syntax-highlighting", defer:2, lazy:true
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # タイプ補完
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "chrissicool/zsh-256color"
-# 補完の可視化
-autoload -Uz compinit
-compinit
-zstyle ':completion:*' menu select
 # ミスタイプ時に似たコマンドの提案
 setopt correct
 
@@ -47,6 +43,11 @@ setopt hist_reduce_blanks
 # ビープ音をオフにする
 setopt no_beep
 setopt nolistbeep
+
+# 補完の可視化
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
