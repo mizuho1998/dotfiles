@@ -61,23 +61,6 @@ alias ll='ls -l'
 alias lla='ls -al'
 
 
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
-eval "$(pyenv init -)"
-
-export PATH="$HOME/.cargo/bin:$PATH"
-source $HOME/.cargo/env
-
-export PATH="$HOME/.local/bin:$PATH"
-
-# goenv
-# GO_VERSION=`goenv version | sed -e 's/\([0-9]*.[0-9]*.[0-9]*\)\(.*\)/\1/'`
-# export PATH="$HOME/go/$GO_VERSION/bin:$PATH"
-if [ -n "$GOPATH" ]; then export PATH=$PATH:$GOPATH/bin; fi
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-
 case `uname -a` in
     Darwin* )
         [[ -f "${HOME}/.zshrc.mac" ]] && source "${HOME}/.zshrc.mac"
