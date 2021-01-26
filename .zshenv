@@ -27,5 +27,5 @@ if [ -z $ZSH_ENV_LOADED ]; then
     fi
 else
     echo "skep loading .zshenv\n"
-    clear
+    # clear
 fi
