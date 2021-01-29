@@ -193,3 +193,7 @@ nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearc
 filetype on
 
 set backspace=indent,eol,start
+
+set wildmode=longest,full
+set wildmenu
+set wildmode=full
