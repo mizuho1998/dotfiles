@@ -4,7 +4,7 @@ if [ -z $ZSH_ENV_LOADED ]; then
     export ZSH_ENV_LOADED="1"
 
     if [ -z $TMUX ]; then
-        if [ -n "$HOME/.anyenv/bin" ]; then
+        if [ -e "$HOME/.anyenv/bin" ]; then
             export PATH="$HOME/.anyenv/bin:$PATH"
             eval "$(anyenv init -)"
         fi
@@ -17,7 +17,7 @@ if [ -z $ZSH_ENV_LOADED ]; then
             export PATH=$PATH:$GOPATH/bin;
         fi
 
-        if [ -n "$HOME/.cargo/bin" ]; then
+        if [ -e "$HOME/.cargo/bin" ]; then
             export PATH="$HOME/.cargo/bin:$PATH"
             source $HOME/.cargo/env
         fi
