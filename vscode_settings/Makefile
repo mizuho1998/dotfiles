@@ -4,5 +4,8 @@ delete-settings:
 deploy:
 	./deploy.sh
 
-backup_extensions:
+backup-extensions:
 	code --list-extensions >> ./extensions.txt
+
+restore-extensions:
+	./restore_extensions.sh
