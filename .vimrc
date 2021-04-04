@@ -80,6 +80,7 @@ let g:ale_fixers = {
 \   'html': ['prettier'],
 \   'css': ['prettier'],
 \   'json': ['prettier'],
+\   'sh': ['shfmt'],
 \}
 
 let g:ale_lint_on_text_changed = 'never'
