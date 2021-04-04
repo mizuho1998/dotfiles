@@ -20,6 +20,7 @@ formulas=(
     htop
     colordiff
     jq
+    # zsh
     peco
     hub
     cask
