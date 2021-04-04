@@ -26,6 +26,5 @@ if [ -z $ZSH_ENV_LOADED ]; then
         export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
     fi
 else
-    echo "skep loading .zshenv\n"
     # clear
 fi
