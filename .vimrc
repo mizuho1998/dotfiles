@@ -1,6 +1,5 @@
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync
 endif
 
@@ -80,6 +79,7 @@ let g:ale_fixers = {
 \   'javascript': ['prettier', 'eslint'],
 \   'html': ['prettier'],
 \   'css': ['prettier'],
+\   'json': ['prettier'],
 \}
 
 let g:ale_lint_on_text_changed = 'never'
