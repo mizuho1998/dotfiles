@@ -8,10 +8,13 @@
     "breadcrumbs.enabled": true,
     "editor.acceptSuggestionOnEnter": "off",
     "keyboard.dispatch": "keyCode",
+    "editor.formatOnSave": true,
     "[html]": {
-        "editor.tabSize": 4
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.suggest.insertMode": "replace"
     },
     "[javascript]": {
-        "editor.tabSize": 4
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
