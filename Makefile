@@ -14,9 +14,3 @@ github_ssh:
 
 github_check:
 	ssh -T git@github.com
-
-init-vscode:
-	./init_vscode.sh
-
-set-vscode:
-	./set_vscode.sh

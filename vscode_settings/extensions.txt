@@ -1,0 +1,16 @@
+abusaidm.html-snippets
+christian-kohler.path-intellisense
+CoenraadS.bracket-pair-colorizer-2
+esbenp.prettier-vscode
+formulahendry.auto-rename-tag
+ms-python.python
+ms-toolsai.jupyter
+ms-vscode-remote.remote-ssh
+ms-vscode-remote.remote-ssh-edit
+ms-vsliveshare.vsliveshare
+remimarsal.prettier-now
+ritwickdey.LiveServer
+sibiraj-s.vscode-scss-formatter
+vscodevim.vim
+ysemeniuk.emmet-live
+Zignd.html-css-class-completion
