@@ -7,6 +7,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "breadcrumbs.enabled": true,
     "editor.acceptSuggestionOnEnter": "off",
+    "keyboard.dispatch": "keyCode",
     "[html]": {
         "editor.tabSize": 4
     },
