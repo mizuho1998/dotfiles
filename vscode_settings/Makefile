@@ -1,5 +1,5 @@
-delete-settings:
-	./delete_settings.sh
+clean-settings:
+	./clean_settings.sh
 
 deploy:
 	./deploy.sh
