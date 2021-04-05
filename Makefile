@@ -5,7 +5,7 @@ install:
 deploy:
 	./deploy.sh
 
-unlink:
+clean:
 	./unlink.sh
 
 github_ssh:
