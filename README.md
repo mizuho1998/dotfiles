@@ -1,4 +1,6 @@
 
+# Usage
+
 set user info in .gitconfig.local,
 then
 
@@ -12,6 +14,7 @@ then,
 
 - install [anyenv](https://github.com/anyenv/anyenv)
 - install [nodenv](https://github.com/nodenv/nodenv) using anyenv
+- install [goenv](https://github.com/syndbg/goenv) using anyenv
 
 exec:
 
