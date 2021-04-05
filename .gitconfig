@@ -32,3 +32,7 @@
     d1 = diff HEAD~
     d2 = diff HEAD~2
     d3 = diff HEAD~3
+
+[ghq]
+	root = ~/go/src
+	root = ~/ghq
