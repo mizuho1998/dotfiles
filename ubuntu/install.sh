@@ -6,6 +6,7 @@ formulas=(
     curl
     tree
     htop
+    build-essential
     colordiff
     jq
     peco
