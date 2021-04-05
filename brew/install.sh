@@ -22,6 +22,7 @@ formulas=(
     jq
     # zsh
     peco
+    ghq
     hub
     cask
 )
