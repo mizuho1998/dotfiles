@@ -16,6 +16,9 @@ if [ -n "$DISPLAY" ]; then
 fi
 
 alias ls='ls --color=auto'
+alias la='ls -a'
+alias ll='ls -l'
+alias lla='ls -al'
 alias open='nautilus'
 # alias rotate-monitor='xrandr --output eDP-1 --mode 1920x1080 --rotate inverted --right-of DP-2'
 # alias clear-monitor='xrandr --output eDP-1 --mode 1920x1080 --rotate normal --right-of DP-2'
