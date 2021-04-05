@@ -15,7 +15,7 @@ formulas=(
 
 echo "install commands..."
 for formula in "${formulas[@]}"; do
-    apt install -y $formula
+    sudo apt install -y $formula
 done
 
 # install zshrc
