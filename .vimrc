@@ -202,4 +202,7 @@ set wildmode=longest,full
 set wildmenu
 set wildmode=full
 
-set clipboard=unnamedplus
+" set clipboard=unnamedplus   " linux
+if has("clipboard")         " mac
+  set clipboard=unnamed
+endif
