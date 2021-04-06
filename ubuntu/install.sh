@@ -2,6 +2,7 @@
 
 formulas=(
     git
+    tmux
     wget
     curl
     tree

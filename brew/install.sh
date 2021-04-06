@@ -14,6 +14,7 @@ brew upgrade --all
 
 formulas=(
     git
+    tmux
     wget
     curl
     tree
@@ -35,12 +36,12 @@ for formula in "${formulas[@]}"; do
 done
 
 casks=(
-    google-chrome
-    google-japanese-ime
-    firefox
-    slack
-    discord
-    iterm2
+#    google-chrome
+#    google-japanese-ime
+#    firefox
+#    slack
+#    discord
+#    iterm2
 )
 
 echo "start brew cask install apps..."
