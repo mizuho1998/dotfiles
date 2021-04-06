@@ -26,6 +26,7 @@ formulas=(
     ghq
     hub
     cask
+    anyenv
 )
 
 "brew tap..."
