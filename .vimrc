@@ -21,6 +21,9 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'Shougo/deoplete.nvim'
 Plug 'lighttiger2505/deoplete-vim-lsp'
+
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
 call plug#end()
 
 
@@ -106,8 +109,17 @@ let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal 
 " let g:lsp_signs_hint = {'icon': '/path/to/some/other/icon'} " icons require GUI
 let g:lsp_highlight_references_enabled = 1
 
-
-
+"
+" vim-vsnip
+"
+" use vscode snippets
+"
+let OSTYPE = system('uname')
+if OSTYPE == "Darwin\n"
+    let g:vsnip_snippet_dir = '~/Library/Application Support/Code/User/snippets'
+elseif OSTYPE == "Linux\n"
+    let g:vsnip_snippet_dir = '~/.config/Code/User/snippets'
+endif
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
