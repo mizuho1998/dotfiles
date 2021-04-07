@@ -27,6 +27,7 @@ formulas=(
     hub
     cask
     anyenv
+    iproute2mac
 )
 
 "brew tap..."
