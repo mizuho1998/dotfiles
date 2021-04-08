@@ -14,3 +14,11 @@ else
     echo "Your platform ($(uname -a)) is not supported."
     exit 1
 fi
+
+# set vscode snippets for vim 
+if [ -e "$HOME/.vsnip" ]; then
+	ln -s `pwd`"/snippets" "$HOME/.vsnip"
+else
+	mkdir ~/.vsnip
+	ln -s `pwd`"/snippets" "$HOME/.vsnip"
+fi

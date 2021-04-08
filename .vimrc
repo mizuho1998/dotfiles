@@ -115,11 +115,13 @@ let g:lsp_highlight_references_enabled = 1
 " use vscode snippets
 "
 let OSTYPE = system('uname')
-if OSTYPE == "Darwin\n"
-    let g:vsnip_snippet_dir = '~/Library/Application Support/Code/User/snippets'
-elseif OSTYPE == "Linux\n"
-    let g:vsnip_snippet_dir = '~/.config/Code/User/snippets'
-endif
+" if OSTYPE == "Darwin\n"
+"     let g:vsnip_snippet_dir = '~/Library/Application Support/Code/User/snippets'
+" elseif OSTYPE == "Linux\n"
+"     let g:vsnip_snippet_dir = '~/.config/Code/User/snippets'
+" endif
+let g:vsnip_snippet_dir = '~/.vsnip/snippets'
+
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
