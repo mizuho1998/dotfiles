@@ -1,4 +1,27 @@
 #!/bin/bash
+LONGOPTION_LIST=(
+    "term-path"
+)
+OPTION_LIST=(
+    "term-path"
+)
+opts=$(getopt \
+    --longoptions "$(printf "%s:," "${LONGOPTION_LIST[@]}")" \
+    --options "$(printf "%s:," "${OPTION_LIST[@]}")" \
+    -- "$@"
+)
+
+TERM_PATH='./';
+eval set --$opts
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        -p | --term-path)
+            TERM_PATH=$2
+            shift 2
+            ;;
+        *) shift ;;
+    esac
+done
 
 # dock
 defaults write com.apple.dock autohide -int 0
@@ -53,7 +76,6 @@ defaults write NSGlobalDomain FXEnableExtensionChangeWarning -int 1
 
 # terminal
 TERM_PROFILE='custom';
-TERM_PATH='./';
 CURRENT_PROFILE="$(defaults read com.apple.terminal 'Default Window Settings')";
 if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
     # open "$TERM_PATH$TERM_PROFILE.terminal"
