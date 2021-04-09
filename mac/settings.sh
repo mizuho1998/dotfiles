@@ -24,7 +24,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 # dock
-defaults write com.apple.dock autohide -int 0
+defaults write com.apple.dock autohide -int 1
 defaults write com.apple.dock magnification -int 0
 defaults write com.apple.dock mineffect -string scale
 defaults write com.apple.dock "minimize-to-application" -int 1
