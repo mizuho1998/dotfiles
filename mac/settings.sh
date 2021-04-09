@@ -68,8 +68,8 @@ defaults write "com.apple.systemuiserver" menuExtras -array \
 defaults write "com.apple.finder" NewWindowTarget -string "PfHm"
 defaults write "com.apple.finder" NewWindowTargetPath -string "file://${HOME}/"
 defaults write "com.apple.finder" ShowExternalHardDrivesOnDesktop -int 1
-defaults write "com.apple.finder" ShowHardDrivesOnDesktop -int 1
-defaults write "com.apple.finder" ShowMountedServersOnDesktop -int 1
+defaults write "com.apple.finder" ShowHardDrivesOnDesktop -int 0
+defaults write "com.apple.finder" ShowMountedServersOnDesktop -int 0
 defaults write "com.apple.finder" ShowRemovableMediaOnDesktop -int 1
 defaults write NSGlobalDomain AppleShowAllExtensions -int 1
 defaults write NSGlobalDomain FXEnableExtensionChangeWarning -int 1
