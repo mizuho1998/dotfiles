@@ -85,3 +85,25 @@ if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
     defaults write com.apple.Terminal "Startup Window Settings" -string "$TERM_PROFILE"
 fi
 defaults import com.apple.Terminal "$HOME/Library/Preferences/com.apple.Terminal.plist"
+
+
+# Rectangle
+defaults write com.knollsoft.Rectangle SUEnableAutomaticChecks -int 0
+defaults write com.knollsoft.Rectangle SUHasLaunchedBefore -int 1
+defaults write com.knollsoft.Rectangle almostMaximize -dict keyCode 5 modifierFlags 786432
+defaults write com.knollsoft.Rectangle bottomHalf -dict keyCode 38 modifierFlags 786432
+defaults write com.knollsoft.Rectangle bottomLeft -dict keyCode 32 modifierFlags 786432
+defaults write com.knollsoft.Rectangle bottomRight -dict keyCode 34 modifierFlags 786432
+defaults write com.knollsoft.Rectangle centerThird -dict keyCode 46 modifierFlags 786432
+defaults write com.knollsoft.Rectangle firstThird -dict keyCode 45 modifierFlags 786432
+defaults write com.knollsoft.Rectangle firstTwoThirds -dict keyCode 47 modifierFlags 786432
+defaults write com.knollsoft.Rectangle lastThird -dict keyCode 43 modifierFlags 786432
+defaults write com.knollsoft.Rectangle lastTwoThirds -dict keyCode 44 modifierFlags 786432
+defaults write com.knollsoft.Rectangle lastVersion -dict keyCode 49 modifierFlags 786432
+defaults write com.knollsoft.Rectangle maximizeHeight -dict
+defaults write com.knollsoft.Rectangle nextDisplay -dict keyCode 124 modifierFlags 917504
+defaults write com.knollsoft.Rectangle previousDisplay -dict keyCode 123 modifierFlags 917504
+defaults write com.knollsoft.Rectangle rightHalf -dict keyCode 37 modifierFlags 786432
+defaults write com.knollsoft.Rectangle topHalf -dict keyCode 40 modifierFlags 786432
+defaults write com.knollsoft.Rectangle topLeft -dict keyCode 16 modifierFlags 786432
+defaults write com.knollsoft.Rectangle topRight -dict keyCode 31 modifierFlags 786432

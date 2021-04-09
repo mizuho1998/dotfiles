@@ -44,6 +44,7 @@ casks=(
 #    slack
 #    discord
 #    iterm2
+#    rectangle
 )
 
 echo "start brew cask install apps..."
