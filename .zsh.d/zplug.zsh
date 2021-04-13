@@ -8,11 +8,12 @@ source ~/.zplug/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 # theme
-# zplug mafredri/zsh-async, from:github
-# zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
+zplug mafredri/zsh-async, from:github
+zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
+zstyle :prompt:pure:path color magenta
 # prompt_newline='%666v' # single line sindresorhus/pure theme
 # PROMPT=" $PROMPT"
-zplug mizuho1998/common, from:github, as:theme
+# zplug mizuho1998/common, from:github, as:theme
 
 # PROMPT変数内で変数参照する
 setopt prompt_subst
