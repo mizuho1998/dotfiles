@@ -101,7 +101,7 @@ defaults write com.knollsoft.Rectangle lastThird -dict keyCode 43 modifierFlags 
 defaults write com.knollsoft.Rectangle lastTwoThirds -dict keyCode 44 modifierFlags 786432
 defaults write com.knollsoft.Rectangle lastVersion -dict keyCode 49 modifierFlags 786432
 defaults write com.knollsoft.Rectangle maximize -dict keyCode 3 modifierFlags 786432
-defaults write com.knollsoft.Rectangle maximizeHeight -dict
+defaults write com.knollsoft.Rectangle maximizeHeight -dict keyCode 9 modifierFlags 786432
 defaults write com.knollsoft.Rectangle nextDisplay -dict keyCode 124 modifierFlags 917504
 defaults write com.knollsoft.Rectangle previousDisplay -dict keyCode 123 modifierFlags 917504
 defaults write com.knollsoft.Rectangle rightHalf -dict keyCode 37 modifierFlags 786432
