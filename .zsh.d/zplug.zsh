@@ -10,7 +10,7 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 # theme
 zplug mafredri/zsh-async, from:github
 zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
-zstyle :prompt:pure:path color magenta
+zstyle :prompt:pure:path color cyan
 # prompt_newline='%666v' # single line sindresorhus/pure theme
 # PROMPT=" $PROMPT"
 # zplug mizuho1998/common, from:github, as:theme
