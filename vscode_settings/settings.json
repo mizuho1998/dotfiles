@@ -9,6 +9,10 @@
   "editor.acceptSuggestionOnEnter": "off",
   "keyboard.dispatch": "keyCode",
   "editor.formatOnSave": true,
+
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "~/.vimrc",
+
   "[html]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
