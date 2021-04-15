@@ -19,5 +19,6 @@ if [ -d $ZSHHOME -a -r $ZSHHOME -a \
     done
 fi
 
+# anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
