@@ -76,7 +76,7 @@ defaults write NSGlobalDomain AppleShowAllExtensions -int 1
 defaults write NSGlobalDomain FXEnableExtensionChangeWarning -int 1
 
 # terminal
-TERM_PROFILE='custom';
+TERM_PROFILE='Iceberg_custom';
 CURRENT_PROFILE="$(defaults read com.apple.terminal 'Default Window Settings')";
 if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
     echo "${TERM_PATH}"
