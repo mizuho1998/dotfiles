@@ -19,8 +19,8 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'Shougo/deoplete.nvim'
-Plug 'lighttiger2505/deoplete-vim-lsp'
+" Plug 'Shougo/deoplete.nvim'
+" Plug 'lighttiger2505/deoplete-vim-lsp'
 
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
@@ -108,6 +108,7 @@ let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal 
 " let g:lsp_signs_warning = {'text': '‼', 'icon': '/path/to/some/icon'} " icons require GUI
 " let g:lsp_signs_hint = {'icon': '/path/to/some/other/icon'} " icons require GUI
 let g:lsp_highlight_references_enabled = 1
+
 
 "
 " vim-vsnip
@@ -220,3 +221,7 @@ set wildmode=full
 if has("clipboard")         " mac
   set clipboard=unnamed
 endif
+
+
+nmap <Tab>      gt
+nmap <S-Tab>    gT
