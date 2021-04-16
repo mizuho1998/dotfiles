@@ -1,4 +1,5 @@
 [![darwin](https://github.com/mizuho1998/dotfiles/actions/workflows/darwin.yaml/badge.svg?event=push)](https://github.com/mizuho1998/dotfiles/actions/workflows/darwin.yaml)
+[![ubuntu](https://github.com/mizuho1998/dotfiles/actions/workflows/ubuntu.yaml/badge.svg)](https://github.com/mizuho1998/dotfiles/actions/workflows/ubuntu.yaml)
 
 # Usage
 
