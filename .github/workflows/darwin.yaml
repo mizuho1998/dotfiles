@@ -1,0 +1,16 @@
+name: darwin
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  darwin-test:
+    runs-on: macos-latest
+    steps:
+      - name: install
+        run: make install
+      - name: deploy
+        run: make deploy
