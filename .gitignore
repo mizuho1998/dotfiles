@@ -8,3 +8,6 @@
 /.config/*
 !/.config/flake8
 !/.config/pep8
+!/.config/karabiner/
+/.config/karabiner/*
+!/.config/karabiner/karabiner.json
