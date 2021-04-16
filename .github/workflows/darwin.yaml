@@ -11,6 +11,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: install
+        working-directory: ./
         run: |
           pwd
           make install
