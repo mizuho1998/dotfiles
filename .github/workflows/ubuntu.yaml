@@ -1,0 +1,21 @@
+name: ubuntu
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  darwin-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install
+        working-directory: ./
+        run: |
+          make install
+      - name: deploy
+        working-directory: ./
+        run: |
+          make deploy
