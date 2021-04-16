@@ -17,3 +17,15 @@ esac
 alias ..='cd ..'
 alias ...='cd ...'
 
+# git
+alias ga='git add'
+alias gap='git add -p'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gs='git status'
+#alias gp='git push'
+alias gb='git branch'
+alias gco='git checkout'
+alias gf='git fetch'
+alias gc='git commit -m'
+
