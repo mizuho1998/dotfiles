@@ -10,6 +10,7 @@ jobs:
   darwin-test:
     runs-on: macos-latest
     steps:
+      - uses: actions/checkout@v2
       - name: install
         working-directory: ./
         run: |
