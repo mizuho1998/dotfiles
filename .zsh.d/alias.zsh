@@ -13,3 +13,7 @@ linux*)
     alias open='nautilus'
     ;;
 esac
+
+alias ..='cd ..'
+alias ...='cd ...'
+
