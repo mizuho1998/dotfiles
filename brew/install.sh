@@ -32,6 +32,7 @@ formulas=(
     hub
     anyenv
     iproute2mac
+    gh
 )
 
 echo "start brew install apps..."
