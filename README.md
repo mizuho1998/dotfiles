@@ -25,3 +25,12 @@ then,
 
 setting:
 write your github information in `.gitconfig.local`
+
+
+### vscode setting
+
+```
+$ cd vscode_settings
+$ make restore-extensions
+$ make deploy
+```
