@@ -25,12 +25,9 @@ formulas=(
     peco
     ghq
     hub
-    cask
     anyenv
     iproute2mac
 )
-
-"brew tap..."
 
 echo "start brew install apps..."
 for formula in "${formulas[@]}"; do
@@ -54,7 +51,6 @@ for cask in "${casks[@]}"; do
 done
 
 brew cleanup
-brew cask cleanup
 
 cat <<END
 
