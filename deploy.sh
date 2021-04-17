@@ -22,12 +22,9 @@ for f in .??*
 do
     [[ "$f" == ".git" ]] && continue
     [[ "$f" == ".gitignore" ]] && continue
+    [[ "$f" == ".github" ]] && continue
+    [[ "$f" == ".gitconfig.local.example" ]] && continue
     [[ "$f" == ".DS_Store" ]] && continue
 
-    if [ -e $HOME/"$f" ]; then
-        echo "$HOME/$f already exists!"
-    else
-        ln -s `pwd`'/'$f ~
-        echo "$f"
-    fi
+    ln -si `pwd`'/'$f ~/$f
  done
