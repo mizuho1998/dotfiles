@@ -1,7 +1,12 @@
 #!/bin/bash
+has() {
+      type "$1" > /dev/null 2>&1
+}
 
-echo "installing homebrew..."
-which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! has "brew"; then
+    echo "installing homebrew..."
+    which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 
 echo "run brew doctor..."
 which brew >/dev/null 2>&1 && brew doctor
