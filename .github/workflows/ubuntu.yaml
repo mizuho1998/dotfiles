@@ -29,3 +29,8 @@ jobs:
         working-directory: ./
         run: |
           make deploy
+      - name: check .zshrc load
+        working-directory: ~
+        run: |
+          zsh .zshrc 2> error.log; cat error.log
+          if [ -s error.log ]; then false; fi
