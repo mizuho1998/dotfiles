@@ -17,7 +17,8 @@ exec:
 
 1. `$ make github_check`
 
-then,
+
+### anyenv setting
 
 - install [anyenv](https://github.com/anyenv/anyenv)
 - install [nodenv](https://github.com/nodenv/nodenv) using anyenv
