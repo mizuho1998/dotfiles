@@ -5,13 +5,16 @@ on:
     branches: [master]
     paths-ignore:
       - 'README.md'
+      - './ubuntu/**'
   pull_request:
     branches: [master]
     paths-ignore:
       - 'README.md'
+      - './ubuntu/**'
   workflow_dispatch:
     paths-ignore:
       - 'README.md'
+      - './ubuntu/**'
 
 jobs:
   darwin-test:
