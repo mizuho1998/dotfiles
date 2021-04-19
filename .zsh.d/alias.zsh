@@ -14,6 +14,8 @@ linux*)
     ;;
 esac
 
+alias grep='grep --color=auto'
+
 alias ..='cd ..'
 alias ...='cd ...'
 
