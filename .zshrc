@@ -18,7 +18,3 @@ if [ -d $ZSHHOME -a -r $ZSHHOME -a \
         [ \( -f $i -o -h $i \) -a -r $i  ] && . $i
     done
 fi
-
-# anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
