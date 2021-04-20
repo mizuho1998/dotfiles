@@ -8,13 +8,14 @@ zle -N peco-select-history
 bindkey '^r' peco-select-history
 
 # peco ghq
-bindkey '^]' peco-src
-function peco-src() {
-    local src=$(ghq list --full-path | peco --query "$LBUFFER")
-    if [ -n "$src" ]; then
-        BUFFER="cd $src"
-        zle accept-liine
+peco-src () {
+    local repo=$(ghq list | peco --query "$LBUFFER")
+    if [ -n "$repo" ]; then
+        repo=$(ghq list --full-path --exact $repo)
+        BUFFER="cd ${repo}"
+        zle accept-line
     fi
-    zle -R -c
+    zle clear-screen
 }
 zle -N peco-src
+bindkey '^]' peco-src
