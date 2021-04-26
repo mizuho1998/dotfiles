@@ -27,3 +27,7 @@ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/instal
 # install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# install anyenv
+git clone https://github.com/anyenv/anyenv ~/.anyenv
+~/.anyenv/bin/anyenv init

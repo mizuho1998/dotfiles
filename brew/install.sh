@@ -1,6 +1,6 @@
 #!/bin/bash
 has() {
-      type "$1" > /dev/null 2>&1
+    type "$1" >/dev/null 2>&1
 }
 
 if ! has "brew"; then
@@ -30,7 +30,6 @@ formulas=(
     peco
     ghq
     hub
-    anyenv
     iproute2mac
     gh
 )
@@ -41,14 +40,14 @@ for formula in "${formulas[@]}"; do
 done
 
 casks=(
-#    google-chrome
-#    google-japanese-ime
-#    firefox
-#    slack
-#    discord
-#    iterm2
-#    rectangle
-#    alfred
+    #    google-chrome
+    #    google-japanese-ime
+    #    firefox
+    #    slack
+    #    discord
+    #    iterm2
+    #    rectangle
+    #    alfred
 )
 
 echo "start brew cask install apps..."
