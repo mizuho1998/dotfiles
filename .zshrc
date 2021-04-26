@@ -1,3 +1,5 @@
+echo $PATH
+
 ZSHHOME="${HOME}/.zsh.d"
 
 if [ -d $ZSHHOME -a -r $ZSHHOME -a \
@@ -17,4 +19,18 @@ if [ -d $ZSHHOME -a -r $ZSHHOME -a \
         [[ ${i##*/} = *.zsh  ]] &&
         [ \( -f $i -o -h $i \) -a -r $i  ] && . $i
     done
+fi
+
+if [ -d $HOME/.anyenv ] ; then
+    export PATH="$HOME/.anyenv/bin:$PATH"
+    eval "$(anyenv init -)"
+    for D in `\ls $HOME/.anyenv/envs`
+    do
+        export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
+    done
+fi
+
+if [ -e "$HOME/.cargo/bin" ]; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+    source $HOME/.cargo/env
 fi
