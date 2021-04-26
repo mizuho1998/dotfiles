@@ -1,5 +1,3 @@
-echo $PATH
-
 ZSHHOME="${HOME}/.zsh.d"
 
 if [ -d $ZSHHOME -a -r $ZSHHOME -a \
@@ -21,6 +19,7 @@ if [ -d $ZSHHOME -a -r $ZSHHOME -a \
     done
 fi
 
+# anyenv path
 if [ -d $HOME/.anyenv ] ; then
     export PATH="$HOME/.anyenv/bin:$PATH"
     eval "$(anyenv init -)"
