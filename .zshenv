@@ -4,7 +4,7 @@ if [ -z $ZSH_ENV_LOADED ]; then
     export ZSH_ENV_LOADED="1"
 
     if [ -z $TMUX ]; then
-        if [ -e "$HOME/.anyenv/bin" ]; then
+        if [ -e "$HOME/.anyenv" ]; then
             export PATH="$HOME/.anyenv/bin:$PATH"
             eval "$(anyenv init -)"
         fi
