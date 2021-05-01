@@ -28,6 +28,12 @@ if [ -d $HOME/.anyenv ] ; then
         export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
     done
 fi
+if [ -n "$GOPATH" ]; then
+    # GO_VERSION=`goenv version | sed -e 's/\([0-9]*.[0-9]*.[0-9]*\)\(.*\)/\1/'`
+    # export PATH="$HOME/go/$GO_VERSION/bin:$PATH"
+    export PATH=$PATH:$GOPATH/bin;
+fi
+
 
 if [ -e "$HOME/.cargo/bin" ]; then
     export PATH="$HOME/.cargo/bin:$PATH"
