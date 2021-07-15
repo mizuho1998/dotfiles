@@ -84,6 +84,7 @@ let g:ale_fixers = {
 \   'css': ['prettier'],
 \   'json': ['prettier'],
 \   'sh': ['shfmt'],
+\   'php': ['php_cs_fixer', 'prettier'],
 \}
 
 let g:ale_lint_on_text_changed = 'never'
